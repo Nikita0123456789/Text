@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+</head>
+<body>
+    <h1>Text Summarizer</h1>
+    <label for="textInput">Enter text to summarize:</label><br>
+    <textarea id="textInput" rows="10" cols="50"></textarea><br><br>
+    <button onclick="summarizeText()">Summarize</button>
+    <p id="summaryResult"></p>
+
+    <script>
+        function summarizeText() {
+            const textInput = document.getElementById('textInput').value;
+
+            // Dummy function to simulate text summarization (replace with actual library or AI model)
+            const summary = dummyTextSummarization(textInput);
+            document.getElementById('summaryResult').innerText = summary;
+        }
+
+        // Dummy function to simulate text summarization (replace with actual library or AI model)
+        function dummyTextSummarization(text) {
+            // In a real application, you would use a text summarization library or AI model
+            // For simplicity, let's just return the first 50 characters of the input text
+            return text.substring(0, 100);
+        }
+    </script>
+</body>
+</html>
